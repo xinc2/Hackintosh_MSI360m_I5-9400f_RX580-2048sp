@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--WIFI Win10 MUP Definition XML-->
+<MUPDefinition xsi:schemaLocation="http://schemas.dell.com/openmanage/cm/2/0/mupdefinition.xsd mupdefinition.xsd" xmlns="http://schemas.dell.com/openmanage/cm/2/0/mupdefinition.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <packageinformation>
+    <name>Broadcom Wifi</name>
+    <version>1.519.0.0</version>
+    <installertype>installshield installscript</installertype>
+    <packagegrouping>single_package</packagegrouping>
+    <packagingtype>zip</packagingtype>
+    <releasetype>DRVR</releasetype>
+    <mupspecificationversion>2.4.3</mupspecificationversion>
+    <supportedoperatingsystems>
+      <!--Delete the osidentifier element for each unsupported.  -->
+      <osidentifier name="Windows10" architecture="x64" ></osidentifier>
+    </supportedoperatingsystems>
+	<content>
+     <Device componentID="103559">
+        <PCIInfo vendorID="14E4" deviceID="43A3" subDeviceID="0021" subVendorID="1028"/>
+        <PCIInfo vendorID="14E4" deviceID="43A3" subDeviceID="0022" subVendorID="1028"/>
+        <PCIInfo vendorID="14E4" deviceID="43A3" subDeviceID="0023" subVendorID="1028"/>
+        <Image type="DRVR" version="1.519.0.0">
+          <file>bcmwdidhdpcie.inf</file>
+        </Image>
+      </Device>
+    </content>
+  </packageinformation>
+  <executable>
+    <executablename>setup.exe</executablename>
+  </executable>
+  <behaviors>
+    <!-- Delete the behavior element for each unsupported behavior -->
+    <behavior name="attended"></behavior>
+    <behavior name="unattended">
+      <vendoroption>
+        <optionvalue switch="/" requiresvalue="false">s</optionvalue>
+      </vendoroption>
+    </behavior>
+    <behavior name="extractdrivers">
+      <vendoroption>
+        <container>
+          <containervalue switch="/" requiresvalue="false" valuedelimiter="">v</containervalue>
+          <optionvalue switch="" requiresvalue="true" valuedelimiter="=" enclose="&quot;">EXTRACTDRIVERS</optionvalue>
+        </container>
+      </vendoroption>
+    </behavior>
+    <behavior name="freshinstall">
+      <vendoroption>
+        <container>
+          <containervalue switch="/" requiresvalue="false" valuedelimiter="" enclose="">v</containervalue>
+          <optionvalue switch="" requiresvalue="false">FRESHINSTALL=true</optionvalue>
+        </container>
+      </vendoroption>
+    </behavior>
+  </behaviors>
+  <parameters>
+    <parametermapping name="logfile">
+      <vendoroption>
+        <container>
+          <containervalue switch="" requiresvalue="false" valuedelimiter=""></containervalue>
+          <optionvalue switch="/v" requiresvalue="true" valuedelimiter="=" enclose="&quot;">LOGFILE</optionvalue>
+        </container>
+      </vendoroption>
+    </parametermapping>
+  </parameters>
+  <returncodes>
+    <!-- remove the returncodemapping element for each return code that is not supported by the MUP -->
+    <returncodemapping name="SUCCESS">
+      <vendorreturncode>0</vendorreturncode>
+    </returncodemapping>
+    <returncodemapping name="ERROR">
+      <vendorreturncode>1603</vendorreturncode>
+      <vendorreturncode>118</vendorreturncode>
+      <vendorreturncode>117</vendorreturncode>
+      <vendorreturncode>109</vendorreturncode>
+    </returncodemapping>
+    <returncodemapping name="REBOOT_REQUIRED">
+      <vendorreturncode>3010</vendorreturncode>
+    </returncodemapping>
+    <returncodemapping name="ERROR_INSTALL_PLATFORM_UNSUPPORTED">
+      <vendorreturncode>111</vendorreturncode>
+    </returncodemapping>
+    <returncodemapping name="REBOOTING_SYSTEM">
+      <vendorreturncode>1641</vendorreturncode>
+    </returncodemapping>
+  </returncodes>
+  <inventorymetadata>
+    <fullpackageidentifier>
+		<pnpids>
+			<pnpdevice display="Dell Wireless 1820A 802.11ac" componentID="103559">
+				<pciinfo vendorID="14E4" deviceID="43A3" subDeviceID="0021" subVendorID="1028"/>
+        			<pciinfo vendorID="14E4" deviceID="43A3" subDeviceID="0022" subVendorID="1028"/>
+        			<pciinfo vendorID="14E4" deviceID="43A3" subDeviceID="0023" subVendorID="1028"/>
+			</pnpdevice>
+		</pnpids>
+    </fullpackageidentifier>
+  </inventorymetadata>
+</MUPDefinition>
