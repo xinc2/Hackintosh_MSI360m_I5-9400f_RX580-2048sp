@@ -3,7 +3,7 @@
 硬件  | 型号
 ---  | :--
 主板  | 微星 B360M 迫击炮
-处理器 | 英特尔酷睿 i4-9400F
+处理器 | 英特尔酷睿 i5-9400F
 显卡 |	蓝宝石(Sapphire RX580 2048SP 8G; 我的原装vBIOS: `Hynix_H5GC8H24AJR_PARTNER_SAPPHIRE`) `入坑，千万别选RX580 2048sp这款，对黑苹果不友好，不免驱。折腾很久才降级成 RX570 的vBIOS`
 硬盘  |	西部数据 1T m.2 + 阿特斯加 250G SSD(选装，我主要用来做win10,可以不需要)
 内存  |	光威悍将Type-a 16GB DDR4 2666MHz x 1
