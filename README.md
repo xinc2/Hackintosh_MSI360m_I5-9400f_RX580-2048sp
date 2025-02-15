@@ -43,8 +43,8 @@
     [黑苹果安装过程](https://www.sqlsec.com/2018/08/clover.html "黑苹果安装过程")
 
 # 显卡降级: 从原版的 RX580 -> RX570
-- 具体vBIOS降级方法可以参见这个网址: [RX580 2048sp vBIOS降级]("https://osx.cx/rx580-2048sp-shua-vbios-rx570.html")
-- 我用的 RX570 vBIOS: 
+- 具体vBIOS降级方法可以参见这个网址: [RX580 2048sp vBIOS降级](https://osx.cx/rx580-2048sp-shua-vbios-rx570.html)
+- 我用的 RX570 vBIOS: (https://yuexiang.fun/1378.html)
     - `tools/GPU_BIOS_ROM_TOOLS/bios_rx570_hynix_H5GC8H24AJR_PARTNER_SAPPHIRE.rom`
 
 # 成品
